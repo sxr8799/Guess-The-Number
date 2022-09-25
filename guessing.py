@@ -14,7 +14,7 @@ up = float(input("Enter the Upper Range Value: "))
 # The math.log() method returns the natural logarithm of a number, or the logarithm of number to base. math.log(x, base). Since we chose base 2 we are checking binary logarithm.
 
 prob = round(math.log(up - low + 1, 2))
-print("\nIt takes about", prob, " tries in general to guess the correct number!\n")
+print("\nIt takes about {} tries in general to guess the correct number!\n".format(prob))
 
 # Initializing the count at 1.
 count = 1
@@ -37,7 +37,7 @@ while num != x:
     if retry == "y":
         num = float(input("Enter your Guess: "))
     elif retry == "n":
-        print("Better Luck Next time. The Random number was", x)
+        print("Better Luck Next time. The Random number was {}".format(x))
         break
 if num == x:
-    print("Congratulation you guessed it","\n""It took you",count,"tries to guess the number")
+    print("Congratulation you guessed it","\nIt took you {} tries to guess the number".format(count))
